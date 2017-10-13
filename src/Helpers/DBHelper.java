@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBHelper {
 	
-	private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/databaseName=MiMotor";
+	private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/mimotor";
 	private static final String USER = "root";
 	private static final String PASS = "";
 	
@@ -39,5 +39,4 @@ public class DBHelper {
 			}
 		}
 	}
-
 }

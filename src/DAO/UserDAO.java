@@ -54,7 +54,7 @@ public class UserDAO {
 			stm = con.createStatement();
 			
 			//STEP 2: Creating the query
-			query = "SELECT * FROM users WHERE nmae = '"+username+"' AND pass = '"+pass+"'";
+			query = "SELECT * FROM users WHERE name = '"+username+"' AND pass = '"+pass+"'";
 			
 			//STEP 3: Executing the query and obtaining the resulset data
 			rs = stm.executeQuery(query);
@@ -63,8 +63,6 @@ public class UserDAO {
 				user = new User();
 				
 				user.setUsername(rs.getString(2));
-				user.setEmail(rs.getString(3));
-				user.setAdmin(rs.getBoolean(5));
 			}
 		} catch (SQLException e) {
 			user = null;

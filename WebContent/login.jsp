@@ -19,12 +19,14 @@
 		
 			//STEP 2: Verifying the credentials 
 			userDao = new UserDAO();
+			out.println(name+" "+pass);
+			
 			user = userDao.readingUser(name, pass);
 			
 			if(user != null){
-				
+				response.sendRedirect("mainProfile.html");
 			}else{
-				
+				out.println("Los datos introducidos no son correctos");
 			}
 		%>
 	</body>
