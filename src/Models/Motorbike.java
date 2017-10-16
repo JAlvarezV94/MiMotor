@@ -9,14 +9,15 @@ public class Motorbike {
 	private float price;
 	private String[] comments;
 	
-	public Motorbike(String mod,String trad, String typ, float pric,String[] comm) {
+	public Motorbike(String typ, String trad, String mod, String color,float pric,String[] comm) {
 		this.model = mod;
 		this.trademark = trad;
 		this.type = typ;
 		this.price = pric;
+		this.color = color;
 		this.comments = comm;
 	}
-
+	
 	public String getModel() {
 		return model;
 	}

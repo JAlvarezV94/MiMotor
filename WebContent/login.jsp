@@ -24,7 +24,7 @@
 			user = userDao.readingUser(name, pass);
 			
 			if(user != null){
-				response.sendRedirect("mainProfile.html");
+				response.sendRedirect("mainProfile.jsp");
 			}else{
 				out.println("Los datos introducidos no son correctos");
 			}

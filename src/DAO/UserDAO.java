@@ -27,8 +27,8 @@ public class UserDAO {
 			stm = con.createStatement();
 			
 			//STEP 2: Creating the query
-			query = "INSERT INTO users(name,email,pass,level) VALUES('"+newUser.getUsername()+"','"+newUser.getEmail()
-			+"','"+newUser.getPass()+"','"+newUser.isAdmin()+"')";
+			query = "INSERT INTO users (`name`, `email`, `pass`, `level`) VALUES ('"+newUser.getUsername()+
+					"','"+newUser.getEmail()+"','"+newUser.getPass()+"',"+newUser.isAdmin()+")";
 			
 			//STEP 3: Executing the query and obtaining the boolean result
 			isCreated = stm.execute(query);
@@ -54,7 +54,7 @@ public class UserDAO {
 			stm = con.createStatement();
 			
 			//STEP 2: Creating the query
-			query = "SELECT * FROM users WHERE name = '"+username+"' AND pass = '"+pass+"'";
+			query = "SELECT * FROM users WHERE email = '"+username+"' AND pass = '"+pass+"'";
 			
 			//STEP 3: Executing the query and obtaining the resulset data
 			rs = stm.executeQuery(query);
@@ -70,6 +70,37 @@ public class UserDAO {
 		}
 		
 		return user;		
+	}
+	
+	public boolean userIsExist(User user) {
+		String query;
+		boolean exists;
+		Connection con;
+		Statement stm;
+		ResultSet rs;
+		
+		try {
+			con = DBHelper.getConnection();
+			stm = con.createStatement();
+			
+			query = "SELECT * FROM users WHERE email = '"+user.getEmail()+"'";
+			
+			rs = stm.executeQuery(query);
+			
+			rs.next();
+			
+			if(rs.getRow() == 0) {
+				exists = false;
+			}else {
+				exists = true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			exists = true;
+		}
+		
+		return exists;
 	}
 	
 	//UPDATE

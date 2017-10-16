@@ -8,7 +8,7 @@ import java.sql.Statement;
 import Helpers.DBHelper;
 import Models.Motorbike;
 
-public class MorobikeDAO {
+public class MotorbikeDAO {
 
 	//CRUD
 	
@@ -62,6 +62,38 @@ public class MorobikeDAO {
 		return isCreated;
 	}
 	//READ
+	
+	public boolean verifyMotorbikeExists(Motorbike motorbike) {
+		boolean isExist;
+		String query;
+		Connection con;
+		Statement stm;
+		ResultSet rs;
+		
+		try {
+			//STEP 1: Obtaining the connection
+			con = DBHelper.getConnection();
+			stm = con.createStatement();
+			
+			//STEP 2: Building the query
+			query = "SELECT * FROM motorbikes WHERE modelo = '"+motorbike.getModel()+"' AND marca = '"+motorbike.getTrademark()+"' AND color = '"+motorbike.getColor()
+			+"' AND tipo = '"+motorbike.getType()+"' AND precio = "+motorbike.getPrice();
+			
+			//STEP 3: Doing the query
+			rs = stm.executeQuery(query);
+			rs.next();
+			if(rs.getRow()==0) {
+				isExist = false;
+			}else {
+				isExist = true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			isExist = false;
+		}
+		
+		return isExist;
+	}
 	
 	//UPDATE
 	

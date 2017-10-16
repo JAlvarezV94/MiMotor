@@ -11,9 +11,10 @@ public class User {
 	
 	public User() {}
 	
-	public User(String username, String email, boolean isAdmin) {
+	public User(String username, String email, String pass, boolean isAdmin) {
 		this.username = username;
 		this.email = email;
+		this.pass = pass;
 		this.isAdmin = isAdmin;
 	}
 
