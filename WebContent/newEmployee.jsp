@@ -16,8 +16,8 @@
 			
 			UserDAO userDao = new UserDAO();
 			//STEP 1: Catchign the datas of new Employee and building the User object
-			String name = request.getParameter("name");
-			String email = request.getParameter("email");
+			String name = request.getParameter("name_newuser");
+			String email = request.getParameter("email_newuser");
 			String pass = request.getParameter("password");
 			
 			if(request.getParameter("level").equals("admin")){

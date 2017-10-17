@@ -30,9 +30,17 @@ function addNewEmployee(){
 			"<option value='admin'>Administrador</option>"+
 			"<option value='moder'>Moderador</option>"+
 		 "</select><br>"
-		+"Nombre: <input type='text' name='name'/><br>"
-		+"Email: <input type='email' name='email'/><br>"
+		+"Nombre: <input type='text' name='name_newuser'/><br>"
+		+"Email: <input type='email' name='email_newuser'/><br>"
 		+"Password: <input type='password' name='password'/><br>"
 		+"<input type='submit' value='Guardar'/><br>"
 	+"</from>";
+}
+
+function catalog(){
+	location.href="catalog.jsp";
+}
+
+function main(){
+	location.href="mainProfile.jsp";
 }

@@ -12,7 +12,7 @@
 		<h1>Bienvenido!</h1>
 			
 		<header>
-			<button>Catálogo</button>
+			<button onclick="catalog()">Catálogo</button>
 			<button onclick="addNewMotorbike()">Nueva Moto</button>
 			<button onclick="addNewEmployee()">Nuevo Usuario</button>
 			<button onclick="logout()">Logout!</button>

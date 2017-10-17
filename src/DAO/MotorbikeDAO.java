@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import Helpers.DBHelper;
 import Models.Motorbike;
@@ -95,6 +96,40 @@ public class MotorbikeDAO {
 		return isExist;
 	}
 	
+	
+	public ArrayList<Motorbike> obtainingCalatog() {
+		ArrayList<Motorbike> catalog;
+		String query;
+		Connection con;
+		Statement stm;
+		ResultSet rs;
+		
+		try {
+			catalog = new ArrayList<Motorbike>();
+			
+			con = DBHelper.getConnection();
+			stm = con.createStatement();
+			
+			query = "SELECT * FROM motorbikes";
+			
+			rs = stm.executeQuery(query);
+			
+			while(rs.next()) {
+				catalog.add(new Motorbike(
+						rs.getString("tipo"),
+						rs.getString("marca"),
+						rs.getString("modelo"),
+						rs.getString("color"),
+						rs.getFloat("precio"),
+						null));
+			}
+		} catch (SQLException e) {
+			catalog = null;
+			e.printStackTrace();
+		}
+		
+		return catalog;
+	}
 	//UPDATE
 	
 	//DELETE

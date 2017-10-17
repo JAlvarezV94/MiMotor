@@ -19,7 +19,6 @@
 		
 			//STEP 2: Verifying the credentials 
 			userDao = new UserDAO();
-			out.println(name+" "+pass);
 			
 			user = userDao.readingUser(name, pass);
 			
