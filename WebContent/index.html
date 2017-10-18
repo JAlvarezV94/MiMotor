@@ -3,14 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Principal Main MiMotor</title>
+		<link href="styles/style.css" rel="stylesheet" type="text/css"/>
+		<link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
+		
 	</head>
 	<body>
-		<div>
-			<form action="login.jsp" method="POST">
-				<input type="text" name="username"/><br>
-				<input type="password" name="pass"/><br>
-				<input type="submit" value="login!"/>
-			</form>
+		<div id="central">
+			<div class="interior">
+				<h1>Inicio de sesión</h1>
+			</div>
+			<div class="interior">
+				<form action="login.jsp" method="POST">
+					<input type="text" name="username"/>
+					<input type="password" name="pass"/>
+					<input type="submit" value="login!" id="login"/>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

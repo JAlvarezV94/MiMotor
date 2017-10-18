@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+body{
+    background-image: url("images/motowallpaperducati.jpg");
+}
+
+#central{
+	float:left;
+	width: 100%;
+	background-color:rgba(20, 20, 20, 0.6);
+	padding: 3%;
+}
+
+div .interior{
+	float: left;
+	margin-left: 80%;
+}
+
+#login{
+	padding: 5px;
+	margin: 10px auto 0px auto;
+	background-color: #2590FA;
+	border-style: none;
+}
+
+#login:hover{
+	background-color: #1184F6;
+	border-color: #1184F6;
+}
+
+#login:active{
+	color: #1184F6;
+	background-color: white;
+	border-color: white;
+}
+
+h1{
+	color:white;
+	font: xx-large passion_one;
+}
+
+/*Add a new font to the server*/
+@font-face{
+	font-family: passion_one;
+	src: url('fonts/Passion_One/PassionOne-Regular.ttf');
+}

@@ -26,8 +26,14 @@
 		
 			
 			//STEP 2: Creating the table dynamically with the datas obtained
-			
 			out.print("<table style='border:solid black'>");
+				out.print("<tr>");
+					out.print("<th>Tipo</th>");
+					out.print("<th>Marca</th>");
+					out.print("<th>Modelo</th>");
+					out.print("<th>Color</th>");
+					out.print("<th>Precio</th>");
+				out.print("</tr>");
 			for(Motorbike moto: catalog){
 				out.print("<tr>");				
 					out.print("<td>"+moto.getType()+"</td>");
