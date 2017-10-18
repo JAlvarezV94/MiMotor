@@ -7,20 +7,21 @@
 		<title>Main Profile | MiMotor</title>
 		
 		<script src="scripts/myScripts.js" type="text/javascript"></script>
+		<link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
+		<link href="styles/style.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<body>
-		<h1>Bienvenido!</h1>
-			
+	<body>			
 		<header>
+		</header>
+			
+		<nav>
 			<button onclick="catalog()">Catálogo</button>
 			<button onclick="addNewMotorbike()">Nueva Moto</button>
 			<button onclick="addNewEmployee()">Nuevo Usuario</button>
 			<button onclick="logout()">Logout!</button>
-		</header>
-			
+		</nav>
 		<section>
 			<div id="central">
-					<p id="p1">Holi</p>
 			</div>
 		</section>
 			

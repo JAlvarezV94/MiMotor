@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+body{
+    background-image: url("images/motowallpaperducati.jpg");
+}
+
+div .interior{
+	float: left;
+	margin-left: 80%;
+}
+
+#login{
+	padding: 5px;
+	margin: 10px auto 0px auto;
+	background-color: #2590FA;
+	border-style: none;
+}
+
+#login:hover{
+	background-color: #1184F6;
+	border-color: #1184F6;
+}
+
+#login:active{
+	color: #1184F6;
+	background-color: white;
+	border-color: white;
+}
