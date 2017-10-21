@@ -8,19 +8,24 @@
 		<title>Login | MiMotor</title>
 	</head>
 	<body>
-	<%@ page import="DAO.UserDAO" import="Models.User" %>
+	<%@ page import="DAO.UserDAO" import="Models.User" import="Helpers.EncodeHelper" %>
 		<%
 			User user;
 			UserDAO userDao;
+			String encodedPass;
 			
 			//STEP 1: Obtaining the parameters from the form
 			String name = request.getParameter("username");
 			String pass = request.getParameter("pass");
 		
+			//STEP 1.2: Encoding the password by SHA1 to comparate
+			
+			encodedPass = EncodeHelper.toSHA1(pass);
+			
 			//STEP 2: Verifying the credentials 
 			userDao = new UserDAO();
 			
-			user = userDao.readingUser(name, pass);
+			user = userDao.readingUser(name, encodedPass);
 			
 			if(user != null){
 				response.sendRedirect("mainProfile.jsp");
