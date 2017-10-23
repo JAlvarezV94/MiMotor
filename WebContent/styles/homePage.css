@@ -9,6 +9,14 @@ div .interior{
 	margin-left: 80%;
 }
 
+#central{
+	float:left;
+	width: 100%;
+	background-color:rgba(242, 241, 241, 0.77);
+	padding: 3%;
+}
+
+
 #login{
 	padding: 5px;
 	margin: 10px auto 0px auto;

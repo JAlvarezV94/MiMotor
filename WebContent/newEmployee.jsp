@@ -21,6 +21,11 @@
 			String email = request.getParameter("email_newuser");
 			String pass = request.getParameter("password");
 			
+			if(name.equals("") || email.equals("") || pass.equals("")){
+				response.setHeader("error", "empty_employee");
+				response.sendRedirect("mainProfile.jsp");
+			}
+			
 			if(request.getParameter("level").equals("admin")){
 				admin = true;
 			}
