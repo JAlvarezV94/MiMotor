@@ -20,7 +20,7 @@
 			<button onclick="catalog()">Ir al catálogo</button>
 			<button onclick="logout()">Logout!</button>
 		</nav>
-		<section>
+		<section id="principal">
 			<div id="central">
 				<h1>BIENVENIDO A MIMOTOR!</h1>
 			</div>

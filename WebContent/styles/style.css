@@ -13,7 +13,7 @@ html,body{
 	padding: 3%;
 }
 
-section{
+#principal{
 	float:left;
 	width: 100%;
 	height:60%;
@@ -69,6 +69,26 @@ input[type=submit]:active{
 h1{
 	color:white;
 	font: xx-large passion_one;
+}
+
+section{
+	width:100%;
+	height: 100%;
+	background-color: red;
+}
+
+article{
+	margin: 0 auto;
+	padding: 5%;
+	width: 50%;
+	height: 100%;
+	background-color: white;
+}
+table{
+	width: 100%;
+	margin: 0 auto;
+	border: red 3px solid;
+	border-collapse: collapse;
 }
 
 footer{
